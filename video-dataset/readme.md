@@ -9,7 +9,7 @@ Wizard-of-Oz user study investigating gesture-based control for fighting games
 (using Tekken 8 as a testbed).
 
 Each clip contains a single annotated gesture event, centered within the video,
-with temporal buffer before and after the gesture.
+with a temporal buffer before and after the gesture.
 
 The dataset is fully anonymised. All audio has been removed.
 
@@ -18,7 +18,7 @@ The dataset is fully anonymised. All audio has been removed.
 ------------------------
 
 The data was collected as part of an MSc thesis in Interaction Technology at
-the University of Twente.
+The University of Twente.
 
 Participants were asked to perform hand gestures corresponding to fighting-game
 actions (e.g., forward, backward, punch, kick, multi-hit moves). The system
@@ -146,11 +146,11 @@ dataset contains:
 If you use this dataset, please cite:
 
 Wahaj Ahmad.
-Exploring the Design Potential of Wizard-of-Oz Elicited Hand Gestures for
+Beyond Buttons: Exploring the Design Potential of Wizard-of-Oz Elicited Hand Gestures for
 Fighting Game Control.
 MSc Thesis, University of Twente, 2026.
 
-(Include DOI once assigned by Zenodo.)
+DOI: 10.5281/zenodo.18688237
 
 
 10. CONTACT
@@ -158,4 +158,4 @@ MSc Thesis, University of Twente, 2026.
 
 For questions regarding the dataset, please contact:
 
-[Your academic email]
+wahaj.ahmad6@outlook.com
