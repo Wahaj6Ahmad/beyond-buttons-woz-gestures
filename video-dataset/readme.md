@@ -150,7 +150,7 @@ Beyond Buttons: Exploring the Design Potential of Wizard-of-Oz Elicited Hand Ges
 Fighting Game Control.
 MSc Thesis, University of Twente, 2026.
 
-DOI: 10.5281/zenodo.18688237
+DOI: https://doi.org/10.5281/zenodo.18688237
 
 
 10. CONTACT
