@@ -1,23 +1,41 @@
-It’s a batch “stitch my raw recordings into one video per camera per participant” script.
+# Video Preprocessing Pipeline (WoZ Gesture Study)
 
-Briefly, it:
+This folder contains a small, numbered pipeline of scripts to turn raw recordings into **clean, synchronized videos** that are easy to **watch, review, and annotate** (e.g., in ELAN).
 
-Looks inside User_Recordings/ for participant folders like P001, P002, etc.
+The typical flow is:
 
-For each participant, it creates (in User_Recordings/Experiment_1/):
+1) stitch raw camera chunks into one file per camera  
+2) compress / standardize frame rate where needed  
+3) sync front + top + screen using clap times into a single stacked video  
 
-Pxxx_E1_front.mp4 (from front camera files)
+---
 
-Pxxx_E1_top.mp4 (from GoPro/top files)
+## What you get at the end
 
-Pxxx_E1_screen.mp4 (from screen recording)
+For each participant (e.g., `P001`), you end up with a single file like:
 
-How it builds them:
+- `synced_outputs/P001_synced.mp4`
 
-Front: finds .mts files in Pxxx/front/, converts them to mp4 if needed, then concatenates them into one ..._front.mp4.
+This final synced video shows:
 
-Top/GoPro: finds .mp4 chunks in Pxxx/gopro/, concatenates them into one ..._top.mp4, and deletes GoPro sidecar files (.lrv, .thm).
+- **Front view + Top view + Screen view** side-by-side (horizontally stacked)  
+- aligned using the **clap** moment you logged in `clap_times.xlsx`
 
-Screen: finds a single .mp4 in Pxxx/screen/ and just copies it into ..._screen.mp4 using ffmpeg stream copy.
+These synced videos are ideal for annotation because:
+- the views are aligned in time
+- frame rate is constant (50 fps)
+- you can scrub and annotate confidently without drift
 
-It also skips a participant if all three output videos already exist.
+---
+
+## Requirements
+
+- Python 3.9+ recommended
+- `ffmpeg` and `ffprobe` available in your PATH  
+  - Verify: `ffmpeg -version` and `ffprobe -version`
+- Python packages:
+  - `pandas` (needed for the sync script)
+
+Install pandas if needed:
+```bash
+pip install pandas
