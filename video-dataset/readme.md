@@ -14,7 +14,7 @@ with a temporal buffer before and after the gesture.
 The dataset is fully anonymised. All audio has been removed.
 
 
-2. STUDY CONTEXT (BRIEF)
+2. STUDY CONTEXT
 ------------------------
 
 The data was collected as part of an MSc thesis in Interaction Technology at
@@ -91,7 +91,7 @@ The primary gesture of interest is always centered in the clip.
 This dataset is suitable for public academic use.
 
 
-6. DATA PROCESSING PIPELINE (HIGH LEVEL)
+6. HIGH LEVEL DATA PROCESSING PIPELINE
 ----------------------------------------
 
 1. Participants were recorded using synchronized multi-camera capture.
